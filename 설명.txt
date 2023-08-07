@@ -1,0 +1,239 @@
+
+  오전 9:14
+ES7+ React/Redux/React-Native snippets
+9:15
+vscode 에서 설치
+9:17
+https://nodejs.org/ko
+nodejs.org
+Node.js
+Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+
+nodejs.orgnodejs.org
+Node.js
+Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+9:18
+node.js 크롬v8엔진으로 빌드된 js런타임이다.
+9:20
+node.js홈페이지에서 18.17.0버전 다운로드
+9:21
+cmd 윈도우 명령 프롬프트(관리자권한으로 실행)
+node-v
+v18.17.0
+node.js는 서버에서 실행시는 것 여태 우리가 해왔던건 html에서 실행시키던것
+9:24
+vscode에서 node -v는 현재 node.js의 버전 확인 명령문
+
+
+  오전 9:30
+node.js를 설치하면 자동으로 npm도 설치가 된다
+9:31
+npm -v를 실행시키면 9.6.7버전이 생성된다.
+9:31
+npm -v는 npm의 버전을 물어보는 실행문이다.
+9:32
+npm(Node Package Manager):전세계의 자바스크립트 라이브러리를 모아 놓은 공개 저장소이다.
+9:33
+npm말고 "얀"이 있지만 그닥 신경쓰지 않아도 된다.
+9:35
+npm install npx -g를 설치한뒤
+9:35
+npx -v하면
+9:36
+9.6.7버전이 나온다ㅏ.
+9:38
+npm install npx -g 터미널에 입력후 인스톨 시킨다.
+9:38
+npx - 1회성으로 최신버전의 노드패키지를 내려받아 설치시켜주는 노드 패키지이다.
+9:39
+https://git-scm.com/downloads
+9:40
+깃으로 들어가서 다운로드
+9:40
+깃허브는 저장소 이고,깃은 컴퓨터 파일의 변경사항을 추적하고 여러 명의 사용자들 간에 해당 파일들의 작업을 조율하기 위한 스냅샷 스트림 기반의 분산 버전 관리 시스템이다.
+9:42
+위의 홈페이지 들어가서 click to download 클릭
+9:44
+git --version이라고 치면 현재 설치된 깃의 버전을 알수 있다.
+9:44
+2.41.0버전이여야 된다.
+9:44
+git version 2.41.0.windows.3버전이여야 된다.
+9:46
+터미널에서 안나오면 설치된 git bash에서 똑같이 git --version이라고 치면된다.
+
+
+  오전 10:02
+movie_app이라는 폴더 생성해서 그곳에 리액트 앱 생성
+npx create-react-app movie_app으로 설치 (편집됨) 
+10:05
+npx creat-react-app ./이라고 치고 react-app을 설치할수 있다.
+
+
+지정배
+  오전 10:11
+위처럼 실행후 터미널에 "npm start" 친다음 실행
+
+
+  오전 11:04
+숨김 파일에서 git파일은 어디에 보내지 않는다
+11:04
+파일이 크기 때문에
+11:06
+public <- 에 index파일의 div#root가 가장 중요하다.
+
+
+  오전 11:29
+프론트 엔트 - 화면 동작
+백엔드 - 데이터 베이스 구축
+11:29
+프레임 워크
+:개발자들의 개발 생상성을 높이기 위해 일정한 룰과 규칙에 따라 개발하도록 미리 구조를 정의해 놓은 도구
+11:32
+프레임 워크는 MVC 패턴을 가지고 있어야한다.
+M(Model) V(View)C(Controller)패턴
+11:32
+그러나 react는 view만 담당하는 라이브러리이다.
+11:33
+react로 앱을 만들려면 react외에 수많은 라이브러리를 사용해야한다.
+11:33
+컨트롤러로부터 받은 모델의 결과값을 가지고 사용자에게 출력할 화면을 만드는 일을 한다.
+11:34
+Controller(컨트롤러) 클라이언트에 요청을 받아 Model을 호출한다. (편집됨) 
+
+11:35
+Model은 응용프로그램에서 데이터 처리하는 역할이다. (편집됨) 
+
+11:36
+View는 모델의 데이터 처리를 받아 보여주는 호출이다.
+11:37
+"function App() {
+  return (
+    <div className="App">"안녕하세요!"</div>
+  );
+}
+export default App;"
+jsX 는 자바스크립트 안에서 html문법을 사용해서 view를 구성할 수 있게 도와주는 자바스크립트 문법
+11:37
+리액트는 Component 기반
+11:37
+리액트는 컴포넌트 기반의 라이브러리이다.
+11:38
+피그마에서 앱을 컴포넌트 단위로 만드는 이유는 개발할때 이렇게 제작하기 때문
+11:39
+리액트는 페이스북이 만든 사용자 UI구축을 위한 라이브러리
+
+
+
+8.1
+*함수형 컴포넌트
+
+*클래스형 컴포넌트
+
+현재 spa라는 형식이다.
+
+react는 데이터가 자식에서 자식으로 그 자식에서 자식으로의 단방향으로만 진행된다.
+
+데이터 관리
+props
+상위 컴포넌트에서 하위 컴포넌트로 전달되는 읽기 전용 데이터
+
+
+
+
+
+8.2
+처음에 컴포넌트가 생성이 되었을때 constructor가 실헹이 된다.
+
+state 컴포넌트의 상태 state를 저장하고 변경할 수 있는 데이터, 클래스형 컴포넌트에서 사용
+
+
+8.3
+컨트롤 + C 한다음에 NO npm install axios 
+axios 설치
+
+8.4
+home.js클래스형 - rcc
+about.js 함수형 - rfce
+
+SPA(single page application)
+ npm install react-router-dom
+router라우터는 사용자가 입력한 url을 통해 특정 컴포넌트를 불러오는 기능 
+
+
+터미널 입력 안될땐 컨트롤 + C를 한뒤 No를 해주면 다시 입력 가능하다.
+터미널 창에 화살표 ↑키를 입력하면 내가 마지막으로 사용한 명령어 사용
+
+8.07
+깃허브는 저장소이다.
+
+좌측상단에서 레파지토리를 사용
+
+내파일을 웹상에 저장가능 하며, 다 내파일들은누구나 쓸수 있도록 공개되어있다.
+
+레파지토리의 이름을 정했으면, 좌측하단에 크리에이트 레파지토리
+
+알드라이브 파일질라는 ftp라는 프로그램을 사용했다.
+
+이제는 깃이라는 것을 사용할 것이다.
+깃은 분산처리
+"
+echo "# Movie_app" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Kheara/Movie_app.git
+
+
+git push -u origin main
+"
+위의 명령어를 통해 깃에 저장한다.
+
+그다음에 깃허브 페이지로 배포를 한다.
+
+내컴퓨터에 있는 파일을 깃으로 깃허브 에 저장한뒤 깃허브 페이지로 배포하게 된다.
+
+npm install gh-pages를 입력해 다운로드후 깃페이지에 등록한다.
+
+package.json에서 script부분에 "predeploy":"npm run build", "deploy":"gh-pages-d build" 추가로 입력해준다.
+위에 처럼만 해선 진행이 안되니 App.js로 가서 "BrowserRouter"안에 basename = {process.env.PUBLIC_URL}를 입력해준다.
+
+새로운 터미널을 열어준뒤 "git init"를 터미널창에 입력 그러면 move_app폴더에 git파일 생성됨
+
+그다음 다시 터미널창에 git add .(add뒤에 띄어쓰기 중요)를 입력한뒤 엔터(나의 모드파일을 나타냄)
+(나의 모든 파일을 스테이지에 올리겠다.)
+
+그다음 터미널창에 "git commit -m "first commit"입력
+(해당 작업에 해당되는 코멘트를 남길수 있음 commit은 영어로 간단 명료하게 적어야한다.)
+
+그다음 터미널창에"git branch -M main"입력
+
+그다음git remote add origin https://github.com/Kheara/Movie_app.git입력
+(error: remote origin already exists.)라고 나오긴 하지만 그대로 진행
+remote가 원격저장소이며, 이를 연결하는 코드이다.
+
+그다음 git push -u origin main입력
+업로드 하는 명령어이다.
+
+
+(
+git config --list 이걸로 현재 내껄로 로그인이 되어 있는지 확인
+
+만약에 다른 사람껄로 로그인 되어 있을경우 
+git config --global user.name "Kheadr" <-- 내 유저네임
+git config --global user.email wlwjdoq12@gmail.com <-- 내 깃허브 이메일
+git config --list를 입력해서 내 유저이름과 이메일 나오는지 확인후
+터미널 종료후  "git init" 부터 다시 위에 과정을 해준다.
+
+위의 과정을 통해도 안된다면(git config --global --unset credential.helper)과
+(git config --global credential.helper 'cache --timeout=3600')을 입력
+
+)
+
+위에 과정 모두 실행후 "npm run deploy"를 입력
+
+npm run을 진행우 폴더에 build가 생성된다. 기업사이트 처럼 js를 나눠준다.
+현재 우리는 자동화 해서 진행하였지만, 프론트 엔드는 하나하나 모듈화 할줄 알아야한다.
+
+무비 폴더 / 레파지토리 화면 캡처 / 레파지토리 주소 / 깃허브 페이지안의 세팅 페이지
